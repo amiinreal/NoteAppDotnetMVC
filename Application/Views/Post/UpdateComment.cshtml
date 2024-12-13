@@ -1,0 +1,14 @@
+@model NoteApp.Models.Comment
+
+    <div class="container">
+        <h2>Edit Comment</h2>
+        <form asp-action="UpdateComment" method="post">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <div class="form-group">
+                <label for="Content">Comment</label>
+                <textarea id="Content" name="Content" class="form-control" required>@Model.Content</textarea>
+            </div>
+            <button type="submit" value="Update"class="buttonstandard btn">Save</button>
+            <button asp-action="Index" class="buttonstandardCancel btn">Cancel</button>
+        </form>
+    </div>
